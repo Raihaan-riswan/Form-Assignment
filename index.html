@@ -10,6 +10,69 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <style>
+        
+/* A container to center the form and give it a max-width */
+.simple-form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+/* Each form field group (label + input) */
+.form-group {
+    margin-bottom: 15px;
+}
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+/* Input and Textarea styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Important to include padding within the width */
+}
+.form-group textarea {
+    height: 120px;
+    resize: vertical; /* Allow vertical resizing */
+}
+/* Focus state for inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+/* Submit button styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+</style>
+    
   </head>
   <body>
     <!-- This is Normal heading Navbar using boostrap -->
@@ -25,6 +88,34 @@
     </nav>
 
     <!-- Navber end -->
+     <!-- Form -->
+      <div class="simple-form-container">
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+      <!-- Form end -->
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
