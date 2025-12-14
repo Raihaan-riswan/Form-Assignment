@@ -97,7 +97,7 @@
     <!-- Navber end -->
      <!-- Form -->
       <div class="simple-form-container">
-    <form action="#" method="post">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
