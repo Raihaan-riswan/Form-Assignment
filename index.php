@@ -97,6 +97,8 @@
     <!-- Navber end -->
     <!-- this is php validation code -->
         <?php
+
+        ?>
         
      <!-- Form -->
       <div class="simple-form-container">
