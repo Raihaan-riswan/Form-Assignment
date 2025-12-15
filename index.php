@@ -102,14 +102,14 @@
 
             if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(empty($_POST["name"])){
-                   $nameErr = "Name is required" 
+                   $nameErr = "Name is required";
                 }
                 else{
                     $name = test_input($_POST["name"]);
                 }
 
                 if(empty($_POST["email"])){
-                   $nameErr = "Email is required" 
+                   $nameErr = "Email is required"; 
                 }
                 else{
                     $email = test_input($_POST["email"]);
@@ -120,7 +120,7 @@
                 }
 
                 if(empty($_POST["contact"])){
-                   $nameErr = "Contact number is required" 
+                   $nameErr = "Contact number is required"; 
                 }
                 else{
                     $name = test_input($_POST["contact"]);
