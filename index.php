@@ -97,12 +97,13 @@
     <!-- Navber end -->
     <!-- this is php validation code -->
         <?php
-
+            $nameErr = $emailErr = $contactErr = $dateErr = $postionErr = $linkErr = $workErr = "";
+            $name = $email = $contact = $date = $position = $resume = $message = $linkedin = $work = "";
         ?>
         
      <!-- Form -->
       <div class="simple-form-container">
-      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
@@ -115,7 +116,7 @@
         
         <div class="form-group">
             <label for="subject">Contact Number</label>
-            <input type="tel" id="contact-number" name="contact-number">
+            <input type="tel" id="contact" name="contact">
         </div>
         <div class="form-group">
             <label for="subject">Date of Birth</label>
