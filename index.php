@@ -97,13 +97,49 @@
     <!-- Navber end -->
     <!-- this is php validation code -->
         <?php
-            $nameErr = $emailErr = $contactErr = $dateErr = $postionErr = $linkErr = $workErr = "";
-            $name = $email = $contact = $date = $position = $resume = $message = $linkedin = $work = "";
+            $nameErr = $emailErr = $contactErr = $postionErr = $linkErr = $workErr = "";
+            $name = $email = $contact = $position = $resume = $message = $linkedin = $work = "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                if(empty($_POST["name"])){
+                   $nameErr = "Name is required" 
+                }
+                else{
+                    $name = test_input($_POST["name"]);
+                }
+
+                if(empty($_POST["email"])){
+                   $nameErr = "Email is required" 
+                }
+                else{
+                    $email = test_input($_POST["email"]);
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                         $emailErr = "Invalid email format";
+                    }
+
+                }
+
+                if(empty($_POST["contact"])){
+                   $nameErr = "Contact number is required" 
+                }
+                else{
+                    $name = test_input($_POST["contact"]);
+                }
+                
+            }
+        
+        
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
         ?>
         
      <!-- Form -->
       <div class="simple-form-container">
-      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
+      <form method="post" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
