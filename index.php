@@ -80,6 +80,10 @@
 .error{
     color:red;
 }
+.nme{
+    color:red;
+    text-size:10px;
+}
 
 </style>
     
