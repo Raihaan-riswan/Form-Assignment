@@ -221,12 +221,12 @@
         <div class="form-group">
             <label for="subject">Date of Birth</label>
             <input type="date" id="date" name="date">
-            <span class="error">* <?php echo $contactErr;?></span>
+            <span class="error">* <?php echo $dateErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Position Applied for</label>
             <input type="text" id="position" name="position">
-            <span class="error">* <?php echo $contactErr;?></span>
+            <span class="error">* <?php echo $postionErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Upload Resume</label>
