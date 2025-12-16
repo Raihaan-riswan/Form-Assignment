@@ -127,7 +127,7 @@
                 }
                 else{
                     if (!preg_match('/^[0-9]{10}$/', $contact)) {
-                         contactErr = "Please Enter correct contact format";
+                         $contactErr = "Please Enter correct contact format";
                     }
                     else{
                         $contact = test_input($_POST["contact"]);
@@ -153,7 +153,18 @@
                     $resumeErr = "Resume is required"; 
                 }
                 else{
-                    $resume = test_input($_POST["resume"]);
+                   if (isset($_FILES['file']) && $_FILES['file']['error'] == 0) { $fileType = mime_content_type($_FILES['file']['tmp_name']);
+                    if ($fileType !== "application/pdf") { 
+                        $resumeErr = "please upload pdf file"; 
+                    } else { 
+                    $position = test_input($_POST["resume"]);
+                        
+                    } 
+                } 
+                else { 
+                    $resumeErr = "please upload pdf file"; 
+                
+                }
                 }
 
                 if(empty($_POST["message"])){
