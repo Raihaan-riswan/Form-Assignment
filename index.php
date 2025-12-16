@@ -125,6 +125,12 @@
                 else{
                     $name = test_input($_POST["contact"]);
                 }
+                if(empty($_POST["date"])){
+                   $nameErr = "Date of birth is required"; 
+                }
+                else{
+                    $name = test_input($_POST["date"]);
+                }
                 
             }
         
