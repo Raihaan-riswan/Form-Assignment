@@ -271,24 +271,24 @@
         
         <button type="submit" class="submit-btn">Apply</button>
     </form>
-    <?php
-    if (
-            empty($nameErr) &&
-            empty($emailErr) &&
-            empty($contactErr) &&
-            empty($dateErr) &&
-            empty($postionErr) &&
-            empty($resumeErr) &&
-            empty($messageErr) &&
-            empty($linkErr) &&
-            empty($workErr)
-        ) {
-            header("Location: output.php");
-            exit();
-        }
-    ?>
+    
 </div>
       <!-- Form end -->
+
+
+      <!-- this is out put -->
+       <?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
 
 
     <script
