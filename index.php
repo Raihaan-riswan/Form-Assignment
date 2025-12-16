@@ -209,7 +209,7 @@
         
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="text" id="email" name="email">
             <span class="error">* <?php echo $emailErr;?></span>
         </div>
         
