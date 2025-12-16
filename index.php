@@ -125,11 +125,47 @@
                 else{
                     $name = test_input($_POST["contact"]);
                 }
+
                 if(empty($_POST["date"])){
                    $nameErr = "Date of birth is required"; 
                 }
                 else{
                     $name = test_input($_POST["date"]);
+                }
+
+                if(empty($_POST["position"])){
+                   $nameErr = "Position is required"; 
+                }
+                else{
+                    $name = test_input($_POST["position"]);
+                }
+
+                if(empty($_POST["resume"])){
+                   $nameErr = "Resume is required"; 
+                }
+                else{
+                    $name = test_input($_POST["resume"]);
+                }
+
+                if(empty($_POST["message"])){
+                   $nameErr = "Message is required"; 
+                }
+                else{
+                    $name = test_input($_POST["message"]);
+                }
+
+                if(empty($_POST["linkedin"])){
+                   $nameErr = "Linked in account is required"; 
+                }
+                else{
+                    $name = test_input($_POST["linkedin"]);
+                }
+
+                if(empty($_POST["work"])){
+                   $nameErr = "Work experience is required"; 
+                }
+                else{
+                    $name = test_input($_POST["work"]);
                 }
                 
             }
