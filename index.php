@@ -247,7 +247,7 @@
         <div class="form-group">
             <label for="subject">Work Experience (Years)</label>
             <input type="text" id="work" name="work">
-            <span class="error">* <?php echo $contactErr;?></span>
+            <span class="error">* <?php echoc $workErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Skills</label>
