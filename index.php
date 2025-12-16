@@ -289,6 +289,16 @@
 
 
       <!-- this is out put -->
+    <div class="mainopt">
+        <div class="nme">
+            <?php
+                echo"hi $name!";
+            ?>
+        </div>
+    </div>
+    
+    
+    <br><br><br><br><br><br><br>
     <?php
         
         echo $name;
