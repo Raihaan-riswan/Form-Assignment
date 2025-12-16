@@ -292,80 +292,57 @@
 
       <!-- this is out put -->
     <div class="mainopt">
-        <div class="nme">
-            <?php
-                echo"hi $name!";
-            ?>
-        </div>
-        <div class="emil">
-            <?php
-                echo"This is your E-mail address $email!";
-            ?>
-        </div>
-        <div class="cnt">
-            <?php
-                echo"This is your contact number $contact";
-            ?>
-        </div>
-        <div class="dte">
-            <?php
-                echo"And you are born in $date";
-            ?>
-        </div>
-        <div class="psn">
-            <?php
-                echo"And you are apply for $position this position";
-            ?>
-        </div>
-        <div class="msg">
-            <?php
-                echo"And your cover request is $message";
-            ?>
-        </div>
-        <div class="lked">
-            <?php
-                echo"This is your $linkedin LikedIn account";
-            ?>
-        </div>
-        <div class="wrk">
-            <?php
-                echo"And Your work experience is $work years";
-            ?>
-        </div>
-        <div class="skl">
-            <?php
-                echo "You have these skills";
-                echo implode(", ", $skills);
-            ?>
-        </div>
-    </div>
-    
-    
-    <br><br><br><br><br><br><br>
-    <?php
-        
-        echo $name;
-        echo "<br>";
-        echo $email;
-        echo "<br>";    
-        echo $contact;
-        echo "<br>";
-        echo $date;
-        echo "<br>";
-        echo $position ;
-         echo "<br>";
-        echo $resume ;
-         echo "<br>";
-        echo $message ;
-         echo "<br>";
-        echo $linkedin ;
-         echo "<br>";
-        echo $work ;
-        echo "<h3>Skills:</h3>";
-        echo implode(", ", $skills);
+    <h2>Application Summary</h2>
 
-        
-    ?>
+    <div class="info-block">
+        <span>Name</span>
+        <p><?php echo $name; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>Email</span>
+        <p><?php echo $email; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>Contact Number</span>
+        <p><?php echo $contact; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>Date of Birth</span>
+        <p><?php echo $date; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>Position Applied For</span>
+        <p><?php echo $position; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>Cover Letter</span>
+        <p><?php echo $message; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>LinkedIn Profile</span>
+        <p><?php echo $linkedin; ?></p>
+    </div>
+
+    <div class="info-block">
+        <span>Work Experience</span>
+        <p><?php echo $work; ?> years</p>
+    </div>
+
+    <div class="info-block skl">
+        <span>Skills</span>
+        <p><?php echo implode(", ", $skills); ?></p>
+    </div>
+</div>
+
+
+    
+    
 
 
     <script
