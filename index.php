@@ -97,8 +97,8 @@
     <!-- Navber end -->
     <!-- this is php validation code -->
         <?php
-            $nameErr = $emailErr = $contactErr = $postionErr = $linkErr = $workErr = "";
-            $name = $email = $contact = $position = $resume = $message = $linkedin = $work = "";
+            $nameErr = $emailErr = $contactErr = $dateErr = $postionErr = $messageErr = $resumeErr = $linkErr = $workErr = "";
+            $name = $email = $contact = $date = $position = $resume = $message = $linkedin = $work = "";
 
             if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(empty($_POST["name"])){
@@ -109,63 +109,66 @@
                 }
 
                 if(empty($_POST["email"])){
-                   $nameErr = "Email is required"; 
+                   $emailErr = "Email is required"; 
                 }
                 else{
-                    $email = test_input($_POST["email"]);
+                    
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                          $emailErr = "Invalid email format";
+                    }
+                    else{
+                        $email = test_input($_POST["email"]);
                     }
 
                 }
 
                 if(empty($_POST["contact"])){
-                   $nameErr = "Contact number is required"; 
+                  $contactErr = "Contact number is required"; 
                 }
                 else{
-                    $name = test_input($_POST["contact"]);
+                    $contact = test_input($_POST["contact"]);
                 }
 
                 if(empty($_POST["date"])){
-                   $nameErr = "Date of birth is required"; 
+                   $dateErr = "Date of birth is required"; 
                 }
                 else{
-                    $name = test_input($_POST["date"]);
+                    $date = test_input($_POST["date"]);
                 }
 
                 if(empty($_POST["position"])){
-                   $nameErr = "Position is required"; 
+                   $postionErr = "Position is required"; 
                 }
                 else{
-                    $name = test_input($_POST["position"]);
+                    $position = test_input($_POST["position"]);
                 }
 
                 if(empty($_POST["resume"])){
-                   $nameErr = "Resume is required"; 
+                    $resumeErr = "Resume is required"; 
                 }
                 else{
-                    $name = test_input($_POST["resume"]);
+                    $resume = test_input($_POST["resume"]);
                 }
 
                 if(empty($_POST["message"])){
-                   $nameErr = "Message is required"; 
+                   $messageErr = "Message is required"; 
                 }
                 else{
-                    $name = test_input($_POST["message"]);
+                    $message = test_input($_POST["message"]);
                 }
 
                 if(empty($_POST["linkedin"])){
-                   $nameErr = "Linked in account is required"; 
+                   $linkErr = "Linked in account is required"; 
                 }
                 else{
-                    $name = test_input($_POST["linkedin"]);
+                    $linkedin = test_input($_POST["linkedin"]);
                 }
 
                 if(empty($_POST["work"])){
-                   $nameErr = "Work experience is required"; 
+                   $workErr = "Work experience is required"; 
                 }
                 else{
-                    $name = test_input($_POST["work"]);
+                    $work = test_input($_POST["work"]);
                 }
                 
             }
