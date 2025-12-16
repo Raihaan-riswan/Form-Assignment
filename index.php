@@ -81,6 +81,71 @@
 .error{
     color:red;
 }
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f6fc;
+    font-family: "Poppins", sans-serif;
+    color: #2d3748;
+}
+
+/* Main container */
+.mainopt {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+/* Title */
+.mainopt h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Info block */
+.info-block {
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 4px solid #2563eb;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.info-block:hover {
+    background: #edf2f7;
+    transform: translateX(4px);
+}
+
+/* Label */
+.info-block span {
+    display: block;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+/* Value */
+.info-block p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+/* Skills special block */
+.skl {
+    border-left: 4px solid #0ea5e9;
+    background: #e0f7ff;
+}
+
 
 
 </style>
