@@ -77,6 +77,9 @@
 #html, #css, #javascript, #php, #java{
     margin: 10px;
 }
+.error{
+    color:red;
+}
 
 </style>
     
@@ -205,11 +208,13 @@
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
+            <span class="error">* <?php echo $nameErr;?></span>
         </div>
         
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email">
+            <span class="error">* <?php echo $emailErr;?></span>
         </div>
         
         <div class="form-group">
