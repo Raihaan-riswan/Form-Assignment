@@ -201,6 +201,7 @@
             $data = htmlspecialchars($data);
             return $data;
         }
+        
         ?>
         
      <!-- Form -->
@@ -270,6 +271,22 @@
         
         <button type="submit" class="submit-btn">Apply</button>
     </form>
+    <?php
+    if (
+            empty($nameErr) &&
+            empty($emailErr) &&
+            empty($contactErr) &&
+            empty($dateErr) &&
+            empty($postionErr) &&
+            empty($resumeErr) &&
+            empty($messageErr) &&
+            empty($linkErr) &&
+            empty($workErr)
+        ) {
+            header("Location: output.php");
+            exit();
+        }
+    ?>
 </div>
       <!-- Form end -->
 
