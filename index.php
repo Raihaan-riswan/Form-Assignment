@@ -231,7 +231,7 @@
         <div class="form-group">
             <label for="subject">Upload Resume</label>
             <input type="file" id="resume" name="resume">
-            <span class="error">* <?php echo $contactErr;?></span>
+            <span class="error">* <?php echo $resumeErr;?></span>
         </div>
         
         <div class="form-group">
