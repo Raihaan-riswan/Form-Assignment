@@ -126,7 +126,13 @@
                   $contactErr = "Contact number is required"; 
                 }
                 else{
-                    $contact = test_input($_POST["contact"]);
+                    if (!preg_match('/^[0-9]{10}$/', $contact)) {
+                         contactErr = "Please Enter correct contact format";
+                    }
+                    else{
+                        $contact = test_input($_POST["contact"]);
+                    }
+                    
                 }
 
                 if(empty($_POST["date"])){
