@@ -21,6 +21,7 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
+     box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 /* Each form field group (label + input) */
