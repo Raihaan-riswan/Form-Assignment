@@ -115,13 +115,12 @@
                    $emailErr = "Email is required"; 
                 }
                 else{
+                    $email = test_input($_POST["email"]);
                     
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                         $emailErr = "Invalid email format";
+                        $emailErr = "Invalid email format";
                     }
-                    else{
-                        $email = test_input($_POST["email"]);
-                    }
+                    
 
                 }
 
@@ -129,11 +128,9 @@
                   $contactErr = "Contact number is required"; 
                 }
                 else{
+                     $contact = test_input($_POST["contact"]);
                     if (!preg_match('/^[0-9]{10}$/', $contact)) {
-                         $contactErr = "Please Enter correct contact format";
-                    }
-                    else{
-                        $contact = test_input($_POST["contact"]);
+                        $contactErr = "Please Enter correct contact format";
                     }
                     
                 }
@@ -204,7 +201,7 @@
         
      <!-- Form -->
       <div class="simple-form-container">
-      <form method="post" action="output.php">
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
@@ -220,6 +217,7 @@
         <div class="form-group">
             <label for="subject">Contact Number</label>
             <input type="tel" id="contact" name="contact">
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Date of Birth</label>
