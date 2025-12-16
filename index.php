@@ -242,7 +242,7 @@
         <div class="form-group">
             <label for="subject">Link in Profile</label>
             <input type="text" id="linkedin" name="linkedin">
-            <span class="error">* <?php echo $contactErr;?></span>
+            <span class="error">* <?php echo $linkErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Work Experience (Years)</label>
