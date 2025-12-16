@@ -148,23 +148,21 @@
                     $position = test_input($_POST["position"]);
                 }
 
-                if(empty($_POST["resume"])){
-                    $resumeErr = "Resume is required"; 
-                }
-                else{
-                   if (isset($_FILES['file']) && $_FILES['file']['error'] == 0) { $fileType = mime_content_type($_FILES['file']['tmp_name']);
-                    if ($fileType !== "application/pdf") { 
-                        $resumeErr = "please upload pdf file"; 
-                    } else { 
-                    $position = test_input($_POST["resume"]);
-                        
-                    } 
-                } 
-                else { 
-                    $resumeErr = "please upload pdf file"; 
-                
-                }
-                }
+               if (empty($_FILES["resume"]["name"])) { $resumeErr = "Resume is required"; } else {
+                 if ($_FILES['resume']['error'] == 0) {
+                     $fileType = mime_content_type($_FILES['resume']['tmp_name']); 
+                      if ($fileType !== "application/pdf") {
+                         $resumeErr = "please upload pdf file"; 
+                        } else 
+                        { 
+                             $resume = test_input($_FILES["resume"]["name"]); 
+                            
+                            } }
+                             else { 
+                                $resumeErr = "please upload pdf file"; 
+                            
+                            } 
+                        }
 
                 if(empty($_POST["message"])){
                    $messageErr = "Message is required"; 
