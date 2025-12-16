@@ -206,6 +206,7 @@
      <!-- Form -->
       <div class="simple-form-container">
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
+
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
