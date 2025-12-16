@@ -111,18 +111,17 @@
                     $name = test_input($_POST["name"]);
                 }
 
-                if(empty($_POST["email"])){
-                   $emailErr = "Email is required"; 
-                }
-                else{
+                if (empty($_POST["email"])) {
+                    $emailErr = "Email is required"; 
+                } else {
                     $email = test_input($_POST["email"]);
-                    
+
+    
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                         $emailErr = "Invalid email format";
                     }
-                    
-
                 }
+
 
                 if(empty($_POST["contact"])){
                   $contactErr = "Contact number is required"; 
