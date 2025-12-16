@@ -221,27 +221,33 @@
         <div class="form-group">
             <label for="subject">Date of Birth</label>
             <input type="date" id="date" name="date">
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Position Applied for</label>
             <input type="text" id="position" name="position">
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Upload Resume</label>
             <input type="file" id="resume" name="resume">
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         
         <div class="form-group">
             <label for="message">Cover Letter</label>
             <textarea id="message" name="message"></textarea>
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Link in Profile</label>
             <input type="text" id="linkedin" name="linkedin">
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Work Experience (Years)</label>
             <input type="text" id="work" name="work">
+            <span class="error">* <?php echo $contactErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Skills</label>
