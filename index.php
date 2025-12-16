@@ -201,6 +201,18 @@
             $data = htmlspecialchars($data);
             return $data;
         }
+        $skills = [];
+        if (!empty($_POST["html"])) { 
+            $skills[] = "HTML"; 
+        } if (!empty($_POST["css"])) {
+             $skills[] = "CSS"; 
+        } if (!empty($_POST["javascript"])) {
+            $skills[] = "JavaScript"; 
+        } if (!empty($_POST["php"])) {
+             $skills[] = "PHP"; 
+        } if (!empty($_POST["java"])) {
+             $skills[] = "Java"; 
+        }
         
         ?>
         
@@ -278,7 +290,7 @@
 
       <!-- this is out put -->
     <?php
-        echo "<h2>Your Input:</h2>";
+        
         echo $name;
         echo "<br>";
         echo $email;
@@ -296,6 +308,9 @@
         echo $linkedin ;
          echo "<br>";
         echo $work ;
+        echo "<h3>Skills:</h3>";
+        echo implode(", ", $skills);
+
         
     ?>
 
