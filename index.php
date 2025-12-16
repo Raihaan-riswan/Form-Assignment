@@ -299,7 +299,43 @@
         </div>
         <div class="nme">
             <?php
-                echo"This is your E-mail address $name!";
+                echo"This is your E-mail address $email!";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo"This is your contact number $contact";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo"And you are born in $date";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo"And you are apply for $position this position";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo"And your cover request is $message";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo"This is your $linkedin LikedIn account";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo"And Your work experience is $work years";
+            ?>
+        </div>
+        <div class="nme">
+            <?php
+                echo "You have these skills"
+                echo implode(", ", $skills);
             ?>
         </div>
     </div>
