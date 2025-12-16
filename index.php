@@ -237,7 +237,7 @@
         <div class="form-group">
             <label for="message">Cover Letter</label>
             <textarea id="message" name="message"></textarea>
-            <span class="error">* <?php echo $contactErr;?></span>
+            <span class="error">* <?php echo $messageErr;?></span>
         </div>
         <div class="form-group">
             <label for="subject">Link in Profile</label>
