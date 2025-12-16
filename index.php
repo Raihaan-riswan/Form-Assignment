@@ -297,6 +297,11 @@
                 echo"hi $name!";
             ?>
         </div>
+        <div class="nme">
+            <?php
+                echo"This is your E-mail address $name!";
+            ?>
+        </div>
     </div>
     
     
